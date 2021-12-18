@@ -1,0 +1,197 @@
+<div class="card-foreground">
+  <div class="foreground">
+    <div
+      class="header p-3"
+      #header
+      [ngClass]="{ 'header-subsection': isSubSection }"
+    >
+      <a routerLink="" [ngClass]="{ 'text-light': isSubSection }"
+        ><i class="bx bx-arrow-back"></i> Back</a
+      >
+    </div>
+    <div class="container-blanka" *ngIf="currentCard == 'blanka'">
+      <section class="main" #mainSectionOne>
+        <div class="blanka-img">
+          <img
+            [src]="blankaImgs[2]"
+            alt=""
+            class="animate__animated animate__fadeIn"
+          />
+          <h1 class="name text-center animate__animated animate__fadeInUp">
+            Blanka
+          </h1>
+        </div>
+        <div class="blanka-desc">
+          <p class="text-dark">
+            Merry Christmas to one of the coolest and most amazing person I
+            know. Though we have only known each other for a short time, you
+            have grown to become an important person in my life. There is no
+            doubt that I feel an overwhelming amount of happiness and
+            satisfaction every time I get a chance to spend time with you, be it
+            through playing games or just texting; you are really fun, cool, and
+            nice which is why I always enjoy spending time with you. I want you
+            to know that I also want you to feel the way you make me feel, which
+            is why I will always be here for you if ever you need someone to
+            lean on because you have grown to become a treasured person to me.
+            May your life be filled with an insurmountable amount of blessings
+            in fortune, as well as your family and all those you care about.
+            This grace is only befitting for an amazing bestie such as yourself.
+          </p>
+        </div>
+      </section>
+      <section class="second" #subSection>
+        <h2 class="text-light section-title mb-3">
+          What makes you
+          <span
+            class="highlight fw-bold animate__animated"
+            [ngClass]="{ 'highlight-effect': isSectionHighlight }"
+            >special</span
+          >
+        </h2>
+        <h5 class="text-light">You are:</h5>
+        <div class="special-checkbox m-3">
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Sweet</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Caring</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Funny</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Endearing</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Lovely</span>
+          </h5>
+        </div>
+        <h5 class="text-light">Overall, you are:</h5>
+        <div class="rating-bar text-center">
+          <h2 class="text-light pt-1" *ngIf="!isRatingFill">
+            Scroll down to see overall rating
+          </h2>
+          <div
+            class="rating-bar-fill text-center"
+            [ngClass]="{ filled: isRatingFill }"
+          >
+            <h2 class="rating-bar-fill-text">Perfect - 10/10</h2>
+          </div>
+        </div>
+      </section>
+      <section class="main">
+        <h2 class="section-title text-center">
+          Photo <span class="highlight">Gallery</span>
+        </h2>
+        <div
+          class="photo-gallery"
+          *ngFor="let img of blankaImgs; let i = index"
+        >
+          <div class="image image{i+1} mb-4">
+            <img [src]="img" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container-oliwia" *ngIf="currentCard == 'oliwia'">
+      <section class="main" #mainSectionOne>
+        <div class="oliwia-img">
+          <img
+            [src]="oliwiaImgs[1]"
+            alt=""
+            class="animate__animated animate__fadeIn"
+          />
+          <h1 class="name text-center animate__animated animate__fadeInUp">
+            Oliwia
+          </h1>
+        </div>
+        <div class="blanka-desc">
+          <p class="text-dark">
+            Merry Christmas to one of the coolest and most amazing person I
+            know. Though we have only known each other for a short time, you
+            have grown to become an important person in my life. There is no
+            doubt that I feel an overwhelming amount of happiness and
+            satisfaction every time I get a chance to spend time with you, be it
+            through playing games or just texting; you are really fun, cool, and
+            nice which is why I always enjoy spending time with you. I want you
+            to know that I also want you to feel the way you make me feel, which
+            is why I will always be here for you if ever you need someone to
+            lean on. May your life be filled with an insurmountable amount of
+            blessings in fortune, as well as your family and all those you care
+            about. This grace is only befitting for an amazing bestie such as
+            yourself.
+          </p>
+        </div>
+      </section>
+      <section class="second" #subSection>
+        <h2 class="text-light section-title mb-3">
+          What makes you
+          <span
+            class="highlight fw-bold animate__animated"
+            [ngClass]="{ 'highlight-effect': isSectionHighlight }"
+            >special</span
+          >
+        </h2>
+        <h5 class="text-light">You are:</h5>
+        <div class="special-checkbox m-3">
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Sweet</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Caring</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Funny</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Endearing</span>
+          </h5>
+          <h5 class="text-light">
+            <i class="bx bx-check-double highlight"></i
+            ><span class="text-light"> Lovely</span>
+          </h5>
+        </div>
+        <h5 class="text-light">Overall, you are:</h5>
+        <div class="rating-bar text-center">
+          <h2 class="text-light pt-1" *ngIf="!isRatingFill">
+            Scroll down to see overall rating
+          </h2>
+          <div
+            class="rating-bar-fill text-center"
+            [ngClass]="{ filled: isRatingFill }"
+          >
+            <h2 class="rating-bar-fill-text">Perfect - 10/10</h2>
+          </div>
+        </div>
+      </section>
+      <section class="main">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          repellat amet quis nostrum molestiae. Dicta ipsa consequatur earum
+          dolor. Quaerat sequi vitae nihil odio mollitia consectetur quia
+          perspiciatis possimus aperiam, quam accusantium nulla beatae esse
+          voluptatibus. Perferendis fugit unde sequi.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="card-background">
+  <div
+    class="background"
+    [ngClass]="{
+      'bg-blanka': currentCard == 'blanka',
+      'bg-oliwia': currentCard == 'oliwia'
+    }"
+  ></div>
+</div>

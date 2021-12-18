@@ -1,0 +1,184 @@
+.bx {
+  vertical-align: middle;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.background,
+.foreground {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  position: fixed;
+}
+
+.bg-blanka {
+  background-image: url("/assets/card/blanka/blanka-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-oliwia {
+  background-image: url("/assets/card/oliwia/oliwia-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  position: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.foreground {
+  position: absolute;
+  z-index: 5;
+}
+
+.foreground .header {
+  position: fixed;
+  width: 100%;
+}
+
+.foreground .header a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  transition: 0.2s ease;
+}
+
+.header-subsection {
+  transition: 0.2s;
+  z-index: 6;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.foreground .back-btn .bx {
+  vertical-align: middle;
+}
+
+.foreground .back-btn:hover {
+  color: rgb(68, 68, 68);
+  transition: 0.2s ease;
+}
+
+.foreground section {
+  padding: 6rem 20%;
+}
+
+.foreground section p {
+  font-size: 1.5rem;
+}
+
+.foreground section .section-title {
+  font-size: 2.5rem;
+}
+
+.foreground .main {
+  background-color: #fff;
+}
+
+.foreground section .highlight {
+  color: rgba(250, 64, 64, 0.863);
+  display: inline-block;
+}
+
+.highlight-effect {
+  animation: heartBeat;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.foreground .main .blanka-img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.foreground .main .blanka-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.foreground .main .blanka-img .name {
+  font-family: "Meow Script", cursive;
+  font-size: 5rem;
+  transition: 0.2s ease;
+}
+
+.foreground .main .oliwia-img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.foreground .main .oliwia-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.foreground .main .oliwia-img .name {
+  font-family: "Meow Script", cursive;
+  font-size: 5rem;
+  transition: 0.2s ease;
+}
+
+.foreground .second .rating-bar {
+  height: 50px;
+  width: 100%;
+  border-radius: 50px 50px;
+  border: 2px solid white;
+}
+
+.foreground .second .rating-bar-fill {
+  position: relative;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 50px 50px;
+  background-color: rgba(250, 64, 64, 0.863);
+  overflow: hidden;
+}
+
+.photo-gallery .image {
+  height: auto;
+  width: auto;
+}
+
+.photo-gallery .image > img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.filled {
+  width: 100% !important;
+  transition: 0.5s ease;
+}
+
+.foreground .second .rating-bar-fill-text {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  color: #fff;
+  padding: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .foreground section {
+    padding: 6rem 10rem;
+  }
+}

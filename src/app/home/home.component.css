@@ -1,0 +1,161 @@
+.snow-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.snow-bg::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-row {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: transparent;
+  height: 500px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px 25px;
+  overflow-y: auto;
+  z-index: 0;
+  backdrop-filter: blur(5px);
+}
+
+.card .card-bg {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-title {
+  font-size: 3rem;
+}
+
+.card .card-img {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  background: url("https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/03/GettyImages-1092658864_hro-1024x575.jpg?w=1155&h=1528");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 25px;
+  z-index: 5;
+  transition: 0.6s ease;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card.card-1 .overlay {
+  background-image: url("/assets/card/card-bg1.jpg");
+}
+
+.card.card-1 .card-img {
+  background-image: url("/assets/card/card-face1.jpg");
+}
+
+.card.card-2 .overlay {
+  background-image: url("/assets/card/card-bg2.jpg");
+}
+
+.card.card-2 .card-img {
+  background-image: url("/assets/card/card-face2.jpg");
+}
+
+.card .overlay .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 20rem;
+}
+
+.card .card-body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card:hover .overlay {
+  filter: none;
+  -webkit-filter: none;
+  width: 0;
+  transition: 0.6s ease;
+}
+
+.card .card-body .btn-container {
+  width: 100%;
+  position: relative;
+}
+
+.card .card-body .btn-container .view-btn {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.card .card-body .btn-container .view-btn:hover {
+  background: #fff;
+  transition: 0.2s ease;
+  color: #000;
+}
+
+.bx {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  .card-row {
+    column-gap: 3rem;
+  }
+
+  .col {
+    width: 400px;
+  }
+}
+
+/*================
+  
+  ================*/
