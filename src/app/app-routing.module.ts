@@ -5,9 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { CardsComponent } from './cards/cards.component';
 
 const routes: Routes = [
-  { path: 'christmas-card', component: HomeComponent },
-  { path: 'christmas-card/card/:id', component: CardsComponent },
-  { path: '*', redirectTo: '/christmas-card', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
+  { path: 'card/:id', component: CardsComponent },
+  { path: '*', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
